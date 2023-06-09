@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import ThumbsUp from '../../assets/img/ThumbsUp';
 import ThumbsDown from '../../assets/img/ThumbsDown';
+
+import { colors, progressBarSizes } from '../../styles/constants';
 
 interface Votes {
   positive: number;
@@ -15,11 +17,13 @@ interface StyleProps {
 
 interface Props {
   votes: Votes;
+  className?: string;
 }
 
 const StyledProgressBar = styled.div`
+  align-self: flex-end;
   width: 100%;
-  height: 36px;
+  height: ${progressBarSizes.SMALL};
   display: grid;
   grid-template-columns: ${(p: StyleProps) => p.positivePercentage} ${(p: StyleProps) => p.negativePercentage};
   color: white;
@@ -29,13 +33,13 @@ const StyledProgressBar = styled.div`
     transition: width 500ms ease;
 
     &--positive {
-      background-color: rgba(60, 187, 180, 0.6);
+      background-color: ${colors.positiveOpacity(0.6)};
     }
     &--negative {
-      background-color: rgba(249, 173, 29, 0.6);
+      background-color: ${colors.negativeOpacity(0.6)};
     }
 
-    &-percentage {
+    &__percentage {
       display: flex;
       align-items: center;
       height: inherit;
@@ -51,9 +55,13 @@ const StyledProgressBar = styled.div`
       }
     }
   }
+
+  @media only screen and (min-width: 1440px) {
+    height: ${progressBarSizes.LARGE};
+  }
 `;
 
-const ProgressBar: React.FC = ({ votes }: Props) => {
+const ProgressBar: FC<Props> = ({ votes }) => {
   const [positivePercentage, setPositivePercentage] = useState<string>('50%');
   const [negativePercentage, setNegativePercentage] = useState<string>('50%');
 
@@ -74,13 +82,13 @@ const ProgressBar: React.FC = ({ votes }: Props) => {
   return (
     <StyledProgressBar {...{ positivePercentage, negativePercentage }}>
       <div className="votes votes--positive">
-        <span className="votes-percentage votes-percentage--positive">
+        <span className="votes__percentage votes__percentage--positive">
           <ThumbsUp />
           <p>{positivePercentage}</p>
         </span>
       </div>
       <div className="votes votes--negative">
-        <span className="votes-percentage votes-percentage--negative">
+        <span className="votes__percentage votes__percentage--negative">
           <p>{negativePercentage}</p>
           <ThumbsDown />
         </span>

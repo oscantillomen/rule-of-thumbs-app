@@ -2,27 +2,11 @@ import React from 'react';
 
 const ThumbsDown = () => (
   <React.Fragment>
-    <svg
-      width="16px"
-      height="16px"
-      viewBox="0 0 16 16"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>0D3137C2-9DDC-4124-9A31-801057B1DD1F</title>
       <desc>Created with sketchtool.</desc>
-      <g
-        id="Mobile"
-        stroke="none"
-        strokeWidth="1"
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g
-          id="Mobile---Home"
-          transform="translate(-157.000000, -334.000000)"
-          fill="#FFFFFF"
-        >
+      <g id="Mobile" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Mobile---Home" transform="translate(-157.000000, -334.000000)" fill="#FFFFFF">
           <g id="Hero">
             <g id="Main-Panel" transform="translate(12.000000, 66.000000)">
               <g id="Thumbs-Down" transform="translate(102.000000, 260.000000)">

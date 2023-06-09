@@ -12,18 +12,8 @@ const ThumbsUp: React.FC = () => (
     >
       <title>6262761E-DD8C-4B97-A5F0-DAD841A64E21</title>
       <desc>Created with sketchtool.</desc>
-      <g
-        id="Mobile"
-        stroke="none"
-        strokeWidth="1"
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g
-          id="Mobile---Home"
-          transform="translate(-56.000000, -334.000000)"
-          fill="#FFFFFF"
-        >
+      <g id="Mobile" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Mobile---Home" transform="translate(-56.000000, -334.000000)" fill="#FFFFFF">
           <g id="Hero">
             <g id="Main-Panel" transform="translate(12.000000, 66.000000)">
               <g id="Thumbs-Up" transform="translate(0.000000, 260.000000)">

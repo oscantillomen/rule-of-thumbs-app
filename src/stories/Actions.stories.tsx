@@ -1,27 +1,18 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import ProgressBar from '../components/CharacterCard/ProgressBar';
+import Actions from '../components/CharacterCard/Actions';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Card/ProgressBar',
-  component: ProgressBar,
+  title: 'Card/Actions',
+  component: Actions,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    votes: {
-      positive: Number,
-      negative: Number,
-    },
-  },
-} as ComponentMeta<typeof ProgressBar>;
+  argTypes: {},
+} as ComponentMeta<typeof Actions>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ProgressBar> = args => <ProgressBar {...args} />;
+const Template: ComponentStory<typeof Actions> = args => <Actions {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  votes: {
-    positive: 100,
-    negative: 80,
-  },
-};
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Default.args = {};
