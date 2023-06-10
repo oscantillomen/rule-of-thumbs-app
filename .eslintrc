@@ -13,6 +13,13 @@
     "plugin:storybook/recommended",
     "eslint-config-prettier"
   ],
+  "overrides": [{
+    "files": "**/*.+(ts|tsx)",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  }],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -23,9 +30,6 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "comma-dangle": ["error", "always-multiline"],
-    "no-tabs": 0,
-    "indent": ["error", 2, { "MemberExpression": 1 }],
     "max-len": [
       "error",
       {
@@ -37,13 +41,6 @@
         "ignoreRegExpLiterals": true,
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true
-      }
-    ],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true
       }
     ],
     "react/react-in-jsx-scope": "off"

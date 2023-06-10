@@ -88,7 +88,6 @@ const Article = styled.article`
     width: 100%;
 
     .wrapper {
-      /* background: linear-gradient(to left, #e66465 0%, #9198e5 100%); */
       background: linear-gradient(
         to right,
         rgba(136, 136, 136, 0.2) 0%,
